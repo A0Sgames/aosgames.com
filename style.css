@@ -25,7 +25,9 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
+    overflow-x: hidden;
 }
 
     nav ul li {
@@ -94,6 +96,7 @@ footer {
     width: 100%;
 }
 
+/* Mobile Specific Styles */
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column; /* Stack the nav items vertically */
@@ -107,4 +110,8 @@ footer {
             nav ul li:last-child {
                 margin-top: 1rem; /* Increase space before the last item */
             }
+
+    .hero {
+        padding: 1rem 0; /* Reduce padding on smaller screens */
+    }
 }
