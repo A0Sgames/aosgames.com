@@ -25,7 +25,6 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     overflow-x: hidden;
 }
