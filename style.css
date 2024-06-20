@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFAF01;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+.content h3 {
+    margin-top: 0;
+}
+
+.game, .project, .product, .team-member {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #00142C;
+    color: white;
+}
+
+.hero img {
+    max-width: 10%;
+    height: 10%;
+}
+
+.project img, .product img, .team-member img {
+    max-width: 100%;
+    height: auto;
+}
+
+    .game img {
+        max-width: 20%;
+        height: 20%;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
