@@ -18,26 +18,28 @@ header {
     box-sizing: border-box; /* Include padding in the width calculation */
 }
 
-    header h1 {
-        margin: 0;
-    }
+header h1 {
+    margin: 0;
+}
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
-    nav ul li {
-        display: inline;
-        margin: 0 1rem;
-        white-space: nowrap; /* Prevent wrapping of text within list items */
-    }
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+    white-space: nowrap; /* Prevent wrapping of text within list items */
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
 
 main {
     flex: 1; /* This ensures the main content takes up the remaining space */
@@ -51,17 +53,17 @@ main {
     padding: 2rem 0;
 }
 
-    .hero h2 {
-        margin: 0;
-    }
+.hero h2 {
+    margin: 0;
+}
 
 .content {
     margin-top: 2rem;
 }
 
-    .content h3 {
-        margin-top: 0;
-    }
+.content h3 {
+    margin-top: 0;
+}
 
 .game, .project, .product, .team-member {
     border: 1px solid #ddd;
@@ -69,21 +71,19 @@ main {
     margin: 1rem 0;
     background-color: #00142C;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content in flexbox */
 }
 
 .hero img {
-    max-width: 10%;
-    height: 10%;
-}
-
- .product img, .team-member img {
     max-width: 100%;
-    height: auto;
+    height: auto; /* Maintain aspect ratio */
 }
 
-.game img, .project img {
-    max-width: 20%;
-    height: 20%;
+.product img, .team-member img, .game img, .project img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
 
 footer {
@@ -100,11 +100,11 @@ footer {
         align-items: center; /* Center align items vertically */
     }
 
-        nav ul li {
-            margin: 0.5rem 0; /* Adjust margin for better spacing */
-        }
+    nav ul li {
+        margin: 0.5rem 0; /* Adjust margin for better spacing */
+    }
 
-            nav ul li:last-child {
-                margin-top: 1rem; /* Increase space before the last item */
-            }
+    nav ul li:last-child {
+        margin-top: 1rem; /* Increase space before the last item */
+    }
 }
