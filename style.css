@@ -76,14 +76,19 @@ main {
     height: 10%;
 }
 
- .product img, .team-member img {
+  .team-member img {
     max-width: 100%;
     height: auto;
 }
 
-.game img, .project img {
-    max-width: 20%;
-    height: 20%;
+.project img {
+    max-width: 100px;
+    height: 100px;
+}
+
+.game img {
+    max-width: 100px;
+    height: 100px;
 }
 
 footer {
