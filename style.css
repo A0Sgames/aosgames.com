@@ -99,17 +99,3 @@ footer {
     width: 100%;
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column; /* Stack the nav items vertically */
-        align-items: center; /* Center align items vertically */
-    }
-
-        nav ul li {
-            margin: 0.5rem 0; /* Adjust margin for better spacing */
-        }
-
-            nav ul li:last-child {
-                margin-top: 1rem; /* Increase space before the last item */
-            }
-}
