@@ -72,8 +72,8 @@ main {
 }
 
 .hero img {
-    max-width: 10%;
-    height: 10%;
+    max-width: 150px;
+    height: 150px;
 }
 
   .team-member img {
