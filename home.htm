@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ourlogo.png" type="image/png">
+    <title>AOS Games</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #FFF;
+        }
+
+        header {
+            background-color: #111;
+            color: #FFF;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        header nav a {
+            color: #FFF;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #AAA;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(to bottom, #000, #111);
+            color: #FFF;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .hero button {
+            background-color: #FFF;
+            color: #000;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hero button:hover {
+            background-color: #333;
+            color: #FFF;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .games-section {
+            padding: 3rem 1rem;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .games-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #FFF;
+        }
+
+        .games {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .game-card {
+            background-color: #111;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .game-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .game-card button {
+            margin-top: 1rem;
+            background-color: #FFF;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .game-card button:hover {
+            background-color: #333;
+            color: #FFF;
+        }
+
+        footer {
+            background-color: #111;
+            color: #FFF;
+            text-align: center;
+            padding: 1rem;
+            border-top: 1px solid #333;
+        }
+
+        footer a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #AAA;
+        }
+
+        /* Scrollbar styling */
+        .games::-webkit-scrollbar {
+            height: 10px;
+        }
+        .games::-webkit-scrollbar-track {
+            background: #111;
+        }
+        .games::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="ourlogo.png" alt="AOS Games Logo">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="about.htm">About Us</a>
+            <a href="contact.htm">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to AOS Games</h1>
+        <p>Crafting Fun, One Game at a Time.</p>
+        <button><a href="#games" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.querySelector('#games').scrollIntoView({ behavior: 'smooth' });">Explore Our Games</a></button>
+    </div>
+
+    <section id="games" class="games-section">
+        <h2>Our Games</h2>
+        <div class="games">
+            <div class="game-card" style="cursor: pointer;">
+                <div onclick="window.location.href='animal-gliders.htm';">
+                <img src="gamelogo.png" alt="Game 1">
+                <h3>Animal Gliders</h3>
+                <p>Endless Mountain Descent Adventure!</p>
+            </div>
+                <button onclick="window.location.href='https://github.com/A0Sgames/aosgames.com/raw/refs/heads/main/AnimalGliders2.apk';">Download</button>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/250" alt="Game 2">
+                <h3>Maze Craze</h3>
+                <p>RougeLike Maze Game. Early Devlopment.</p>
+                <button>Coming Soon</button>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/250" alt="Game 3">
+                <h3>AI Travel</h3>
+                <p>Travel Guide</p>
+                <button>Coming Soon</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AOS Games. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
+
