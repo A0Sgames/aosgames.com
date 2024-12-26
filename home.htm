@@ -209,7 +209,7 @@
 <body>
     <header>
         <div class="logo">
-             <a href="home.htm">
+            <a href="home.htm">
                 <img src="ourlogo.png" alt="AOS Games Logo">
             </a>
         </div>
@@ -220,10 +220,14 @@
         </nav>
     </header>
 
-    <div class="hero">
+    <div class="hero" style="background-image: url('aosgames.webp'); background-size: cover; background-position: center; position: relative;">
+        
+        <div style="background-color: rgba(128, 128, 128, 0.7); padding: 2rem; border-radius: 10px; display: inline-block; text-align: center;">
         <h1>Welcome to AOS Games</h1>
-        <p>Crafting Fun, One Game at a Time.</p>
+<p>Crafting Fun, One Game at a Time.</p>
         <button><a href="#games" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.querySelector('#games').scrollIntoView({ behavior: 'smooth' });">Explore Our Games</a></button>
+        </div>
+        
     </div>
 
     <section id="games" class="games-section">
@@ -253,7 +257,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 AOS Games. All rights reserved. | <a href="privacy.htm">Privacy Policy</a></p>
+        <p>&copy; 2024 AOS Games. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
