@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ourlogo.png" type="image/png">
+    <title>Animal Gliders - AOS Games</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #FFF;
+    background-image: url('lol.png'); /* Add your background image path here */
+    background-size: 100%; /* Zooms out the background image */
+    background-position: center;
+}
+
+        header {
+            background-color: #111;
+            color: #FFF;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+             nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        header nav a {
+            color: #FFF;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            background-color: #222;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: #333;
+        }
+
+        @media (min-width: 769px) {
+            header {
+                justify-content: space-between;
+                padding: 1rem 2rem;
+            }
+
+            nav {
+                justify-content: flex-end;
+            }
+
+            .logo {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(to bottom, #222, #111);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: auto;
+            text-align: justify;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .feature-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+    background-color: #111;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    height: 150px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .popover {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #111;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+            display: none;
+            z-index: 1000;
+            max-width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+
+        .popover img {
+            width: 100%;
+            max-width: 500px;
+            margin: 1.5rem auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .popover .close-btn {
+            display: block;
+            background-color: #FFF;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 2rem auto 0;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #111;
+            color: #FFF;
+            text-align: center;
+            padding: 1rem;
+            border-top: 1px solid #333;
+        }
+
+        footer a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #AAA;
+        }
+    </style>
+    <script>
+        function openPopover() {
+            document.getElementById('popover').style.display = 'block';
+        }
+
+        function openPopover2() {
+            document.getElementById('popover2').style.display = 'block';
+        }
+
+        function openPopover3() {
+            document.getElementById('popover3').style.display = 'block';
+        }
+
+        function closePopover() {
+            document.getElementById('popover').style.display = 'none';
+        }
+
+        function closePopover2() {
+            document.getElementById('popover2').style.display = 'none';
+        }
+
+        function closePopover3() {
+            document.getElementById('popover3').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.htm">
+                <img src="ourlogo.png" alt="AOS Games Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="home.htm">Home</a>
+            <a href="about.htm">About Us</a>
+            <a href="contact.htm">Contact</a>
+            <a href="privacy.htm">Privacy</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Animal Gliders</h1>
+        <p>Embark on a Thrilling, High-Flying Journey!</p>
+    </div>
+
+    <div class="description">
+        <p>Embark on a thrilling, high-flying journey with Animal Gliders, the exhilarating 2D endless mobile game where you become one of ten unique animals, each with their own special abilities. Imagine hurtling down a towering mountain, navigating through a perilous, ever-changing landscape filled with obstacles that can spell doom at any moment.</p>
+        <p>In this adrenaline-pumping adventure, you must deftly maneuver your chosen animal through a series of deadly traps, treacherous cliffs, and unexpected hazards. But it's not all doom and gloom, strategically placed power-ups and items can give you a much-needed boost or throw a wrench in your plans, adding an extra layer of excitement and unpredictability to your descent.</p>
+        <p>Animal Gliders combines the fast-paced, endless fun of games like Jetpack Joyride and Doodle Jump with the unique challenge of navigating a vertical world where gravity is both your friend and your foe. Master the art of gliding, dodge obstacles with precision, and see how far you can fall in this endlessly entertaining, beautifully animated adventure. How long can you survive the ultimate mountain descent? Play now and find out.</p>
+    </div>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/pAUp27OoS-8" allowfullscreen></iframe>
+    </div>
+
+    <section class="feature-section">
+        <div class="feature-card" onclick="openPopover()" style="background-image: url('animal menu.png'); background-size: cover;">
+            <h3>Unique Animals</h3>
+            <p>Choose from 10 unique animals, each with special abilities.</p>
+        </div>
+        <div class="feature-card" onclick="openPopover2()" style="background-image: url('mountain.png'); background-size: cover;">
+            <h3>Dynamic Obstacles</h3>
+            <p>Navigate through ever-changing challenges and hazards.</p>
+        </div>
+        <div class="feature-card" onclick="openPopover3()" style="background-image: url('item button.png');">
+            <h3>Items & Power-Ups</h3>
+            <p>Strategically use power-ups to survive longer and score higher.</p>
+        </div>
+    </section>
+
+    <div id="popover" class="popover">
+        <h2 style="text-align: center;">Unique Animals</h2>
+        <img src="monkey.gif" alt="Animal 1">
+        <img src="beaver.gif" alt="Animal 2">
+        <img src="bear.gif" alt="Animal 3">
+        <img src="elephant.gif" alt="Animal 4">
+        <img src="cheetah.gif" alt="Animal 5">
+        <img src="fox.gif" alt="Animal 6">
+        <img src="goat.gif" alt="Animal 7">
+        <img src="lion.gif" alt="Animal 8">
+        <img src="racoon.gif" alt="Animal 9">
+        <img src="wolf.gif" alt="Animal 10">
+        <button class="close-btn" onclick="closePopover()">Close</button>
+    </div>
+
+    <div id="popover2" class="popover">
+        <h2 style="text-align: center;">Obstacles</h2>
+        <img src="grass.gif" alt="Obstacle 1">
+        <img src="log.gif" alt="Obstacle 2">
+        <img src="cloud.gif" alt="Obstacle 3">
+        <img src="rock.gif" alt="Obstacle 4">
+        <button class="close-btn" onclick="closePopover2()">Close</button>
+    </div>
+
+    <div id="popover3" class="popover">
+        <h2 style="text-align: center;">Items & Power-ups</h2>
+        <img src="coin.gif" alt="Obstacle 1">
+        <img src="clover.png" alt="Obstacle 2">
+        <img src="bat.gif" alt="Obstacle 3">
+        <img src="dark mirror.png" alt="Obstacle 4">
+	<img src="banana.png" alt="Obstacle 5">
+	<img src="boost.png" alt="Obstacle 6">
+	<img src="badbox.gif" alt="Obstacle 7">
+	<img src="goodbox.gif" alt="Obstacle 8">
+	<img src="randombox.gif" alt="Obstacle 9">
+	<img src="umbrella.png" alt="Obstacle 10">
+	<img src="magnet.png" alt="Obstacle 11">
+	<img src="teleporter.png" alt="Obstacle 4">
+        <button class="close-btn" onclick="closePopover3()">Close</button>
+    </div>
+
+<section class="credits-section" style="text-align: center; padding: 2rem; background-color: #222; margin-top: 2rem;">
+    <h2 style="color: #FFF; margin-bottom: 1rem;">Game Credits</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+        <div style="background-color: #111; padding: 1.5rem; border-radius: 10px; width: 250px; box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);">
+            <h3 style="margin-bottom: 0.5rem; color: #FFF;">Andrej Paskalov</h3>
+            <p style="color: #FFF; font-size: 0.9rem;">Developer</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Programming</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Creative Decisions and Design</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Testing and Debugging</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Solutions Design</p>
+            <p style="color: #AAA; font-size: 0.9rem;">User Interface Design</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Back-end Integration and Functionality</p>
+        </div>
+        <div style="background-color: #111; padding: 1.5rem; border-radius: 10px; width: 250px; box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);">
+            <h3 style="margin-bottom: 0.5rem; color: #FFF;">Omar Nasir</h3>
+            <p style="color: #FFF; font-size: 0.9rem;">Developer</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Programming</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Creative Decisions and Design</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Testing and Debugging</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Solutions Design</p>
+            <p style="color: #AAA; font-size: 0.9rem;">User Interface Design</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Back-end Integration and Functionality</p>
+        </div>
+        <div style="background-color: #111; padding: 1.5rem; border-radius: 10px; width: 250px; box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);">
+            <h3 style="margin-bottom: 0.5rem; color: #FFF;">Josh Place</h3>
+            <p style="color: #FFF; font-size: 0.9rem;">2D Graphics Designer</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Characters and Items Design</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Background Design and UI Art</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Font</p>
+            <p style="color: #AAA; font-size: 0.9rem;">Animations and Miscellaneous Art</p>
+	    <div style="margin-top: 1rem; text-align: center;">
+    	    <a href="https://www.instagram.com/josh.pointoh/profilecard/?igsh=ZWl1eDB0MGcxbnhw" target="_blank" style="margin: 0px 0 0 0; display: inline-block; position: relative; left: -10px;">
+        	<img src="instagram.png" alt="Link 1" style="width: 50px; height: 50px;">
+    	    </a>
+    	    <a href="https://www.redbubble.com/people/joshpointoh/shop" target="_blank" style="margin: 0 0.5rem;">
+        	<img src="redbubble.png" alt="Link 2" style="width: 50px; height: 50px;">
+    	    </a>
+    	    <a href="https://bsky.app/profile/joshpointoh.bsky.social" target="_blank" style="margin: 0 0.5rem;">
+        	<img src="bluesky.png" alt="Link 3" style="width: 50px; height: 50px;">
+    	    </a>
+	</div>
+
+</section>
+    <footer>
+        <p>&copy; 2024 AOS Games. All rights reserved. | <a href="privacy.htm">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
